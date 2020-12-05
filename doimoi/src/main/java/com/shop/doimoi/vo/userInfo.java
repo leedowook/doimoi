@@ -1,5 +1,10 @@
 package com.shop.doimoi.vo;
 
-public class userInfo {
+import lombok.Data;
 
+@Data
+public class userInfo {
+	String id;
+	String pwd;
+	String name;
 }

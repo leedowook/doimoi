@@ -2,8 +2,12 @@ package com.shop.doimoi.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.shop.doimoi.vo.testVo;
 
 
 @Controller
@@ -16,4 +20,12 @@ public class pageController {
 		return "index";
 	}
 	
+	@PostMapping("/testMappingName")
+	public ModelAndView testPage(@ModelAttribute testVo testData) {
+		mav = new ModelAndView();
+		System.out.print(testData.getData1());
+		mav.addObject("testObject","내용입니다");
+		mav.setViewName("test");
+		return mav;
+	}
 }
