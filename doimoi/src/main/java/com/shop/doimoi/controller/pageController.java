@@ -25,6 +25,7 @@ public class pageController {
 		mav = new ModelAndView();
 		System.out.print(testData.getData1());
 		mav.addObject("testObject","내용입니다");
+		mav.addObject("byunsu",testData.getData2());
 		mav.setViewName("test");
 		return mav;
 	}

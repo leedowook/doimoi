@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	test page 입니당
+	test page 입니당 <br>
+	${byunsu}
 </body>
 </html>
